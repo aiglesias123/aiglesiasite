@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Server time</title>
+</head>
+<body>
+    <div id="nameform">
+        <label for="namebox">Enter name:</label><br>
+        <input type="text" id="namebox" name="namebox"><br>
+        <button type="button" onclick="myFunc()">Send</button><br>
+        <p id="response"></p><br>
+    </div>
+    <script>
+        function myFunc() {
+            let name = document.getElementById("namebox").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "server.php", true);
+            xhttp.send();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Do stuff!
+                }
+            }
+        }
+    </script>
+    <a href="../../../COMP4537.html"><input type="button" value="Back"></a>
+</body>
