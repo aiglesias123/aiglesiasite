@@ -13,7 +13,7 @@
         function myFunc() {
             let name = document.getElementById("namebox").value;
             var xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "http://aiglesias.ca/localhost:3000/?name="+name, true);
+            xhttp.open("GET", "https://aiglesias.ca/localhost:3000/?name="+name, true);
             xhttp.send();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
